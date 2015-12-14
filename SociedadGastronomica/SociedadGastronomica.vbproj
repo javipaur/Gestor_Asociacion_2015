@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13514941-F61D-4E19-921A-22E6789AE764}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SociedadGastronomica.My.MyApplication</StartupObject>
+    <RootNamespace>SociedadGastronomica</RootNamespace>
+    <AssemblyName>SociedadGastronomica</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SociedadGastronomica.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SociedadGastronomica.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Modelo\ConexionBD.vb" />
+    <Compile Include="Modelo\Productos_Pedidos.vb" />
+    <Compile Include="Modelo\Producto.vb" />
+    <Compile Include="Modelo\Pedido.vb" />
+    <Compile Include="Modelo\Socio.vb" />
+    <Compile Include="Vista\Informes\ProductosAlmacen.Designer.vb">
+      <DependentUpon>ProductosAlmacen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Informes\ProductosAlmacen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Informes\TicketAcumulado.Designer.vb">
+      <DependentUpon>TicketAcumulado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Informes\TicketAcumulado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Informes\TicketCobroSocios.Designer.vb">
+      <DependentUpon>TicketCobroSocios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Informes\TicketCobroSocios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Informes\TicketIndividual.Designer.vb">
+      <DependentUpon>TicketIndividual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Informes\TicketIndividual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Pedidos\AltaPedidos.Designer.vb">
+      <DependentUpon>AltaPedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Pedidos\AltaPedidos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Pedidos\BuscarPedidos.Designer.vb">
+      <DependentUpon>BuscarPedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Pedidos\BuscarPedidos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Pedidos\ModificacionBajaPedidos.Designer.vb">
+      <DependentUpon>ModificacionBajaPedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Pedidos\ModificacionBajaPedidos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Productos\AccionesProductos.Designer.vb">
+      <DependentUpon>AccionesProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Productos\AccionesProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Productos\BuscarProductos.Designer.vb">
+      <DependentUpon>BuscarProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Productos\BuscarProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Socios\Acciones.Designer.vb">
+      <DependentUpon>Acciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Socios\Acciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Socios\Buscar.Designer.vb">
+      <DependentUpon>Buscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Socios\Buscar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Inicio.Designer.vb">
+      <DependentUpon>Inicio.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Vista\Informes\ProductosAlmacen.resx">
+      <DependentUpon>ProductosAlmacen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Informes\TicketAcumulado.resx">
+      <DependentUpon>TicketAcumulado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Informes\TicketCobroSocios.resx">
+      <DependentUpon>TicketCobroSocios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Informes\TicketIndividual.resx">
+      <DependentUpon>TicketIndividual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Pedidos\AltaPedidos.resx">
+      <DependentUpon>AltaPedidos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Pedidos\BuscarPedidos.resx">
+      <DependentUpon>BuscarPedidos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Pedidos\ModificacionBajaPedidos.resx">
+      <DependentUpon>ModificacionBajaPedidos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Productos\AccionesProductos.resx">
+      <DependentUpon>AccionesProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Productos\BuscarProductos.resx">
+      <DependentUpon>BuscarProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Socios\Acciones.resx">
+      <DependentUpon>Acciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Socios\Buscar.resx">
+      <DependentUpon>Buscar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Inicio.resx">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
